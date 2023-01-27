@@ -1,0 +1,169 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+/* h1 {} */
+/* font-size: 48px;
+	font-weight: 700;
+	margin-top: 135px; */
+/* text-align: center; */
+h2 {
+  color: white;
+  margin-top: -1.5rem;
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-left: 5rem;
+  text-align: center;
+}
+.description {
+  color: white;
+  margin-left: 0.8rem;
+  margin-top: 6.5rem;
+}
+.logo {
+  height: 130px;
+  padding-left: 5rem;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.menu nav {
+  display: flex;
+  padding: 0.5rem 20rem;
+}
+.menu nav ul {
+  display: flex;
+  line-height: 100px;
+}
+.menu nav ul li {
+  list-style: none;
+  margin-left: 50px;
+  color: var(--text-color);
+}
+.menu nav ul li:hover {
+  font-weight: 600;
+  color: #141603 !important;
+}
+.titleMovieItems {
+  background-color: black;
+  padding: 5rem;
+  position: relative;
+}
+.play {
+  background-color: rgb(243, 54, 54);
+  border-radius: 40px;
+  border: none;
+  padding: 0.8rem 2.3rem;
+  color: white;
+  margin-left: 0.7rem;
+  position: absolute;
+  margin-top: 3.5rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+.bestScoreMovieItems {
+  background-color: black;
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.bestScoreMovieItems img {
+  width: 350px;
+  object-fit: cover;
+  margin-right: 8rem;
+}
+.bestMoviesScore {
+  border: solid 2px;
+  margin: 0 32rem;
+  display: flex;
+}
+.categoryMovieItems a:hover {
+  box-shadow: rgba(232, 89, 99, 0.9) 0 0 22px 6px;
+}
+.categoryMovieItems {
+  border: solid 2px cornflowerblue;
+  display: flex;
+  justify-items: center;
+  margin-left: -14rem;
+}
+.categoryMovieItems img {
+  width: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+/*****footer*****/
+
+footer {
+  color: var(--footer-text-color);
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+footer .footerSecondary {
+  width: 100%;
+}
+footer p {
+  text-align: center;
+}
+/*footerSecondary*/
+.footerSecondary {
+  padding: 25px 0;
+}
+/***************/
+/*Media queries*/
+/***************/
+
+@media (max-width: 1200.98px) {
+  .informations ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .items a {
+    width: 42%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .informations ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .informations ul li {
+    margin-bottom: 14px;
+    margin-right: 0;
+  }
+  .categoryMovieItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    margin-top: 20px;
+  }
+  .menu nav ul {
+    padding: 0;
+    line-height: 80px;
+  }
+  .menu nav ul a:first-child li {
+    margin-left: 0;
+  }
+  .items a {
+    width: 75%;
+  }
+}

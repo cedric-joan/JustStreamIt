@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>JustStreamIl</title>
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Plateforme incroyable de e-commerce" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link href="../css/style.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div class="modal-container">
+      <div class="overlay modal-trigger"></div>
+      <div class="modal">
+        <button class="close-modal">X</button>
+        <img src="" alt="">
+        <h1 class="title"></h1>
+        <p class="genre"></p>
+        <p class="date"></p>
+        <p class="rated"></p>
+        <p class="score"></p>
+        <p class="réalisateur"></p>
+        <p class="actors"></p>
+        <p class="time"></p>
+        <p class="country"></p>
+        <p class="result"></p>
+        <p class="description"></p>
+      </div>
+    </div>
+    <header>
+      <div class="BlockContainer menu">
+        <a href="./index.html">
+          <img
+            class="logo"
+            src="./images/logoJustStreamIt.png"
+            alt="Logo de l'entreprise"
+          />
+        </a>
+        <nav>
+          <ul>
+            <a href="./index.html">
+              <li>Accueil</li>
+            </a>
+            <a href="./cart.html">
+              <li>Catégories</li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="BlockBestScoreMovie">
+      <div class="bestScoreMovieItems" id="bestMovieItems">
+        <div class="titleMovieItems" id="movieItems">
+          <!-- <h2 class="title">Titre du film</h2> -->
+          <button class="play" id="button">PLay</button>
+          <!-- <p class="description">Description</p> -->
+        </div>
+        <!-- <img src="" alt="" > -->
+      </div>
+    </main>
+    <h3 class="category" id="bestScores">Films les mieux notés</h3>
+    <section class="bestMoviesScore">
+      <div class="categoryMovieItems" id="bestScoresItems">
+        <!-- <a href="http://">
+          <img src="" alt="" />
+        </a> -->
+      </div>
+    </section>
+    <h3 class="category" id="action">Catégorie Action</h3>
+    <section class="bestMoviesScore">
+      <div class="categoryMovieItems" id="actionItems">
+        <a href="http://">
+          <img src="" alt="" />
+        </a>
+      </div>
+    </section>
+    <h3 class="category" id="fantasy">Catégorie Aventure</h3>
+    <section class="bestMoviesScore">
+      <div class="categoryMovieItems" id="fantasyItems">
+        <a href="http://">
+          <img src="" alt="" />
+        </a>
+      </div>
+    </section>
+    <h3 class="category" id="comedy">Catégorie Comédie</h3>
+    <section class="bestMoviesScore">
+      <div class="categoryMovieItems" id="comedyItems">
+        <a href="http://">
+          <img src="" alt="" />
+        </a>
+      </div>
+    </section>
+    <footer>
+      <div class="limitedWidthBlockContainer footerSecondary">
+        <div class="limitedWidthBlock">
+          <p>© Copyright 2023 - Powered by CJOAN</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
