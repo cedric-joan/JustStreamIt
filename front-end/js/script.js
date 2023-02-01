@@ -9,6 +9,7 @@ import {
   makeBestmoviesAdventureImages,
   makeBestmoviesComedyImages,
 } from "./dom/indexFonction.js";
+
 // récupérer le film avec le meilleur score du server
 const urlApi = "http://localhost:8000/api/v1/titles/9008642";
 fetch(urlApi)
