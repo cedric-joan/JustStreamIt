@@ -1,8 +1,9 @@
-![image](https://user-images.githubusercontent.com/95696368/217889306-6d17ff4d-002d-4780-b879-e19ecedf5935.png)
-
+[InterfaceJustStreamIT](https://user-images.githubusercontent.com/95696368/217891120-a0729314-9b9d-4f61-acd0-3b9c1ef3e767.jpg)
 # JustStreamIt
 
-#Développez une interface utilisateur pour une application web Pyhton 
+#Développez une interface utilisateur pour une application web Pyht!
+
+on 
 #Intéragir avec une API REST
 
 Cette application web permettra de visualiser en temps réel un classement de films intérressants.
