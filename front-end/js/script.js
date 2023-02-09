@@ -1,4 +1,5 @@
 // import des fonctions dans indexFonctions
+import { bestMoviesScore } from "./dom/bestMoviesScore.js";
 import {
   createLink,
   createImage,
@@ -40,7 +41,8 @@ function displayBestmoviesScores(res) {
   const data = res.results;
   for (let i = 0; i < 5; i++) {
     const { id, image_url } = data[i];
-    makeBestmoviesScoresImages(id, image_url);
+    makeBestmoviesScoresImages(id,image_url);
+    bestMoviesScore(id)
   }
 }
 // récupérer tous les films les mieux notés catégorie action du server
@@ -57,7 +59,6 @@ function displayBestmoviesAction(res) {
   for (let i = 1; i < 5; i++) {
     const { id, image_url } = data[i];
     makeBestmoviesActionImages(id, image_url);
-    console.log(data);
   }
 }
 // récupérer tous les films les mieux notés catégorie aventure du server

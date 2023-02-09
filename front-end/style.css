@@ -14,21 +14,29 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.modal-btn {
+  padding: 10px 14px;
+  font-size: 18px;
+  margin: 100px auto;
+  display: block;
+  min-width: 150px;
+  cursor: pointer;
+}
 .modal-container.active {
   display: block;
 }
-.overlay {
-  position: absolute;
+/* .overlay {
+  position: relative;
   width: 100%;
   height: 100%;
   background: #333333d3;
-}
+} */
 .modal {
   width: 95%;
-  height: 80%;
-  max-width: 500px;
+  height: 65%;
+  max-width: 600px;
   min-width: 300px;
-  padding: 60px;
+  padding: 30px;
   background: #fff;
   border-radius: 10px;
   position: absolute;
@@ -36,20 +44,30 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.close-modal {
-  padding: 8px 10px;
-  border: none;
-  border-radius: 10px;
-  font-size: 20px;
+.modal p {
+  line-height: 1.5;
+}
+.modal .image {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+.close-modal {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  position: absolute;
+  align-items: center;
+  bottom: 10px;
+  left: 250px;
   cursor: pointer;
   background: #ea0432;
   color: #fff;
 }
+
 h1 {
-  font-size: 48px;
+  font-size: 20px;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -127,25 +145,63 @@ h3 {
   width: 300px;
   object-fit: cover;
   margin-right: 9rem;
+  cursor: pointer;
 }
 .bestMoviesScore {
-  border: solid 2px;
-  margin: 0 32rem;
+  overflow: hidden;
+  /* border: solid 2px; */
+  margin: 0 20rem;
   display: flex;
+  /* position: relative; */
+  background-color: black;
+}
+
+.arrow.left {
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  font-size: 40px;
+  cursor: pointer;
+  left: 250px;
+  color: white;
+  background-color: black;
+  margin-top: 10%;
+}
+.arrow.right {
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  display: block;
+  font-size: 40px;
+  cursor: pointer;
+  right: 250px;
+  color: white;
+  background-color: black;
+  margin-top: 10%;
 }
 .categoryMovieItems a:hover {
   box-shadow: rgba(232, 89, 99, 0.9) 0 0 22px 6px;
 }
 .categoryMovieItems {
-  border: solid 2px cornflowerblue;
+  /* border: solid 1px cornflowerblue; */
   display: flex;
   justify-items: center;
-  margin-left: -14rem;
+  margin-left: -14.9rem;
 }
+
+.categoryMovieItems.left {
+  transform: translateX(-14.2%);
+}
+.categoryMovieItems.right {
+  transform: translateX(14.2%);
+}
+
 .categoryMovieItems img {
-  width: 200px;
+  width: 290px;
   object-fit: cover;
   cursor: pointer;
+  padding: 52px;
 }
 /*****footer*****/
 

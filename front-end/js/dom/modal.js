@@ -1,5 +1,37 @@
+  // const {
+  //   image_url,
+  //   title,
+  //   description,
+  //   actors,
+  //   year,
+  //   genres,
+  //   countries,
+  //   rated,
+  //   date_published,
+  //   duration,
+  //   imdb_score,
+  //   directors,
+  // } = data;
+  // makeImage(image_url);
+  // makeTitle(title);
+  // makeParagraph(description);
+  // makeActors(actors);
+  // makeYear(year);
+  // makeGenres(genres);
+  // makeContry(countries);
+  // makeRated(rated);
+  // makeDate(date_published);
+  // makeTime(duration);
+  // makeScore(imdb_score);
+  // makeDirectors(directors);
+// }
 
-
+// function makeImage(image_url) {
+//   const image = document.querySelector(".image");
+//   image.src = image_url;
+//   const modalContainer = document.querySelector(".modal");
+//   modalContainer.appendChild(image);
+// }
 
 // // récupérer id du produit dans url
 // const paramsString = window.location.search;

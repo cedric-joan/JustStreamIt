@@ -2,7 +2,10 @@
 <html lang="fr">
   <head>
     <title>JustStreamIl</title>
-
+    <script
+      src="https://kit.fontawesome.com/5adfeca06f.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="utf-8" />
     <meta name="description" content="Plateforme incroyable de streaming" />
 
@@ -12,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
     <!-- <link href="../css/style.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="style.css" />
 
@@ -20,23 +24,23 @@
 
   <body>
     <div class="modal-container">
-      <div class="overlay modal-trigger"></div>
+      <div class="overlay"></div>
       <div class="modal">
-        <button class="close-modal modal-trigger">X</button>
-        <button class="close-modal modal-trigger">X</button>
-        <img src="" alt="">
+        <button class="close-modal close">Fermer</button>
+        <img class="image" src="" alt="" />
+        <div id="modal-description"></div>
         <h1 class="title">Titre</h1>
         <p class="genre">genre</p>
-        <p class="date">date</p>
+        <p class="year">date</p>
         <p class="rated">rated</p>
-        <p class="score">score</p>
-        <p class="réalisateur">réalisateur</p>
+        <p class="imdb_score">score</p>
+        <p class="directors">réalisateur</p>
         <p class="actors">actors</p>
-        <p class="time">time</p>
-        <p class="country">country</p>
-        <p class="result">result</p>
+        <p class="duration">time</p>
+        <p class="countries">country</p>
         <p class="desc">description</p>
       </div>
+      <!-- <button class="modal-trigger"></button> -->
     </div>
     <header>
       <div class="BlockContainer menu">
@@ -63,7 +67,7 @@
       <div class="bestScoreMovieItems" id="bestMovieItems">
         <div class="titleMovieItems" id="movieItems">
           <!-- <h2 class="title">Titre du film</h2> -->
-          <button class="play" id="button">PLay</button>
+          <button class="play modal-trigger">PLay</button>
           <!-- <p class="description">Description</p> -->
         </div>
         <!-- <img src="" alt="" > -->
@@ -71,6 +75,8 @@
     </main>
     <h3 class="category" id="bestScores">Films les mieux notés</h3>
     <section class="bestMoviesScore">
+      <button class="arrow left slider-left1">&#8678;</button>
+      <button class="arrow right slider-right1">&#8680;</button>
       <div class="categoryMovieItems" id="bestScoresItems">
         <!-- <a href="http://">
           <img src="" alt="" />
@@ -79,6 +85,8 @@
     </section>
     <h3 class="category" id="action">Catégorie Action</h3>
     <section class="bestMoviesScore">
+      <button class="arrow left slider-left2">&#8678;</button>
+      <button class="arrow right slider-right2">&#8680;</button>
       <div class="categoryMovieItems" id="actionItems">
         <!-- <a href="http://">
           <img src="" alt="" />
@@ -87,6 +95,8 @@
     </section>
     <h3 class="category" id="fantasy">Catégorie Aventure</h3>
     <section class="bestMoviesScore">
+      <button class="arrow left slider-left3">&#8678;</button>
+      <button class="arrow right slider-right3">&#8680;</button>
       <div class="categoryMovieItems" id="fantasyItems">
         <!-- <a href="http://">
           <img src="" alt="" />
@@ -95,6 +105,8 @@
     </section>
     <h3 class="category" id="comedy">Catégorie Comédie</h3>
     <section class="bestMoviesScore">
+      <button class="arrow left slider-left4">&#8678;</button>
+      <button class="arrow right slider-right4">&#8680;</button>
       <div class="categoryMovieItems" id="comedyItems">
         <!-- <a href="http://">
           <img src="" alt="" />
