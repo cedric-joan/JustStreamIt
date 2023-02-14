@@ -1,7 +1,4 @@
-// création d'un lien
-
-function addMovieToModal(res) {
-  const data = res;
+function addBestMovieActionToModal(data) {
   const {
     image_url,
     title,
@@ -71,79 +68,30 @@ function makeDesc(description) {
   const items = document.querySelector(".desc");
   items.innerText = description;
 }
-// afficher le nom du film
-function createTitle(name) {
-  const items = document.querySelector("#movieItems");
-  const title = document.createElement("h2");
-  title.classList.add("title");
-  title.innerText = name;
-  items.appendChild(title);
-  return items;
+async function BestMoviesAction(id) {
+  await fetch("http://localhost:8000/api/v1/titles/" + id)
+    .then((res) => res.json())
+    .then((res) => listener(res));
 }
-// afficher une description du film
-function createParagraph(description) {
-  const items = document.querySelector("#movieItems");
-  const paragraph = document.createElement("p");
-  paragraph.classList.add("description");
-  items.appendChild(paragraph);
-  paragraph.innerText = description;
+function listener() {
+  const modalMovies = document.querySelectorAll(".movies");
+  modalMovies.forEach((movie) =>
+    movie.addEventListener("click", openModalAction)
+  );
 }
-// créer l'élément image du film
-function createImage(image_url) {
-  const items = document.querySelector("#bestMovieItems");
-  const image = document.createElement("img");
-  image.src = image_url;
-  items.appendChild(image);
-}
-function makeBestmoviesScoresImages(id, image_url) {
-  const items = document.querySelector("#bestScoresItems");
-  const image = document.createElement("img");
-  image.classList.add("movies");
-  image.setAttribute("movie", id);
-  image.src = image_url;
-  items.appendChild(image);
-}
-function makeBestmoviesActionImages(id, image_url) {
-  const items = document.querySelector(".action");
-  const image = document.createElement("img");
-  image.classList.add("movies");
-  image.setAttribute("movie", id);
-  image.src = image_url;
-  items.appendChild(image);
-}
-function makeBestmoviesAdventureImages(id, image_url) {
-  const items = document.querySelector("#fantasyItems");
-  const image = document.createElement("img");
-  image.classList.add("movies");
-  image.setAttribute("movie", id);
-  image.src = image_url;
-  items.appendChild(image);
-}
-function makeBestmoviesComedyImages(id, image_url) {
-  const items = document.querySelector("#comedyItems");
-  const image = document.createElement("img");
-  image.classList.add("movies");
-  image.setAttribute("movie", id);
-  image.src = image_url;
-  items.appendChild(image);
-}
+async function openModalAction(movie) {
+  const id = movie.target.getAttribute("movie");
+  await fetch("http://localhost:8000/api/v1/titles/" + id)
+    .then((res) => res.json())
+    .then((res) => addBestMovieActionToModal(res));
 
-function createLink(id) {
-  const play = document.querySelector(".play");
-  play.addEventListener("click", () => {
-    fetch("http://localhost:8000/api/v1/titles/" + id)
-      .then((res) => res.json())
-      .then((res) => addMovieToModal(res));
-
-    const modalContainer = document.querySelector(".modal-container");
-    modalContainer.classList.toggle("active");
-    closeModal();
-  });
+  const modalContainer = document.querySelector(".modal-container");
+  modalContainer.classList.toggle("active");
+  closeModalAction();
 }
-
-function closeModal() {
-  const close = document.querySelector(".close");
-  close.addEventListener("click", () => {
+function closeModalAction() {
+  const modal = document.querySelector(".close");
+  modal.addEventListener("click", () => {
     const image = document.querySelector(".image");
     image.innerText = " ";
     const title = document.querySelector(".title");
@@ -170,14 +118,16 @@ function closeModal() {
     modalContainer.classList.remove("active");
   });
 }
-export {
-  makeBestmoviesComedyImages,
-  makeBestmoviesAdventureImages,
-  makeBestmoviesActionImages,
-  makeBestmoviesScoresImages,
-  createImage,
-  createLink,
-  createParagraph,
-  createTitle,
-  // addMovieToModal,
-};
+
+const left = document.querySelector(".slider-left2");
+left.addEventListener("click", () => {
+  const categoryItems = document.getElementById("actionItems");
+  categoryItems.classList.toggle("left");
+});
+const right = document.querySelector(".slider-right2");
+right.addEventListener("click", () => {
+  const category = document.getElementById("actionItems");
+  category.classList.toggle("right");
+});
+
+export { BestMoviesAction };

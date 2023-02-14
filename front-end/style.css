@@ -6,6 +6,7 @@
 body {
   margin: 0px;
   font-family: Montserrat, sans-serif;
+  background-color: #eee9e9;
 }
 .modal-container {
   display: none;
@@ -33,7 +34,7 @@ body {
 } */
 .modal {
   width: 95%;
-  height: 65%;
+  height: 80%;
   max-width: 600px;
   min-width: 300px;
   padding: 30px;
@@ -45,7 +46,7 @@ body {
   transform: translate(-50%, -50%);
 }
 .modal p {
-  line-height: 1.5;
+  line-height: 1.6;
 }
 .modal .image {
   position: absolute;
@@ -67,8 +68,8 @@ body {
 }
 
 h1 {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 h2 {
@@ -163,10 +164,10 @@ h3 {
   display: block;
   font-size: 40px;
   cursor: pointer;
-  left: 250px;
-  color: white;
-  background-color: black;
-  margin-top: 10%;
+  left: 270px;
+  color: black;
+  background-color: white;
+  margin-top: 9%;
 }
 .arrow.right {
   position: absolute;
@@ -175,27 +176,53 @@ h3 {
   display: block;
   font-size: 40px;
   cursor: pointer;
-  right: 250px;
-  color: white;
-  background-color: black;
-  margin-top: 10%;
+  right: 270px;
+  color: black;
+  background-color: white;
+  margin-top: 9%;
 }
-.categoryMovieItems a:hover {
-  box-shadow: rgba(232, 89, 99, 0.9) 0 0 22px 6px;
-}
+
 .categoryMovieItems {
   /* border: solid 1px cornflowerblue; */
   display: flex;
   justify-items: center;
   margin-left: -14.9rem;
+  scroll-behavior: smooth;
 }
-
-.categoryMovieItems.left {
-  transform: translateX(-14.2%);
+.action.left {
+  animation: left 1s ease-in-out both;
 }
-.categoryMovieItems.right {
-  transform: translateX(14.2%);
+@keyframes left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(14.3%);
+  }
 }
+.action.right {
+  animation: right 1s ease-in-out both;
+}
+@keyframes right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-28.6%);
+  }
+}
+/* .categoryMovieItems.right {
+  animation: right 1s ease-in-out both;
+}
+@keyframes right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(14.3%);
+  
+}
+} */
 
 .categoryMovieItems img {
   width: 290px;
