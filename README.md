@@ -1,24 +1,30 @@
-[InterfaceJustStreamIT](https://user-images.githubusercontent.com/95696368/217891120-a0729314-9b9d-4f61-acd0-3b9c1ef3e767.jpg)
 # JustStreamIt
 
-#Développez une interface utilisateur pour une application web Pyht!
+![](images/InterfaceJustStreamIT.jpg)
 
-on 
-#Intéragir avec une API REST
-
+Créer une interface utilisateur pour une application web.
+Intéragir avec une API REST.
 Cette application web permettra de visualiser en temps réel un classement de films intérressants.
 
-#Front-end
+# Front-end
+L'interface se compose de plusieurs zones :
+- Le meilleur film avec le score le plus élevé
+- les 7 films les mieux notés toutes catégories confondues
+- les 7 films les mieux notés pour les catégories Action, Aventure et Comédie.
 
-L'interface se composée des sections qui affichera les films les mieux notés:
-1 - Meilleur film: Affichera le film qui a le score le plus élevé toutes catégories confondues
-2 - les 7 films les mieux notés toutes catégories confondues
-3 - les 7 films les mieux notés de 3 catégories différentes
+# Tester le projet
 
-Une fenêtre modale s'ouvre lorsque l'on clic sur l'image celle-ci affiche toutes les informations du film.
+Lancer votre terminal et clonez le projet:
+
+    git clone https://github.com/cedric-joan/JustStreamIt.git
 
 
-#Back-end
+# Installation du back-end
 
-Pour faire fonctionner ce site web, suiver les instructions présentent ici: https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
-Une fois l'api lancée, l'utilisateur peut accéder au site via la fonction liveshare ou en hébergeant ce dernier.
+Pour faire fonctionner ce site web, suiver les instructions présentent à cette adresse:
+
+    https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
+    
+# Lancer le programme
+
+Une fois l'API lancée, l'utilisateur peut accéder au site via son IDE avec la fonction Live Share ou en hébergeant ce dernier
