@@ -1,8 +1,10 @@
 # JustStreamIt
-InterfaceJustStreamIT.jpg
+![](images/logoJustStreamIt.png)
 
 Créer une interface utilisateur pour une application web.
+
 Intéragir avec une API REST.
+
 Cette application web permettra de visualiser en temps réel un classement de films intérressants.
 
 # Front-end
