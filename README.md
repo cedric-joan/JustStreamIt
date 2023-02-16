@@ -1,5 +1,5 @@
 # JustStreamIt
-![image](images/logoJustStreamIt.png)
+InterfaceJustStreamIT.jpg
 
 Créer une interface utilisateur pour une application web.
 Intéragir avec une API REST.
