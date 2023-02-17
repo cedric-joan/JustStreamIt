@@ -1,5 +1,41 @@
-// création d'un lien
+// afficher le nom du film
+function createTitle(name) {
+  const items = document.querySelector("#movieItems");
+  const title = document.createElement("h2");
+  title.classList.add("title");
+  title.innerText = name;
+  items.appendChild(title);
+  return items;
+}
+// afficher une description du film
+function createParagraph(description) {
+  const items = document.querySelector("#movieItems");
+  const paragraph = document.createElement("p");
+  paragraph.classList.add("description");
+  items.appendChild(paragraph);
+  paragraph.innerText = description;
+}
+// créer l'élément image du film
+function createImage(image_url) {
+  const items = document.querySelector("#bestMovieItems");
+  const image = document.createElement("img");
+  image.src = image_url;
+  items.appendChild(image);
+}
+function createLink(id) {
+  const play = document.querySelector(".play");
+  play.addEventListener("click", () => {
+    fetch("http://localhost:8000/api/v1/titles/" + id)
+      .then((res) => res.json())
+      .then((res) => addMovieToModal(res))
+      .catch((err) => console.error(err));
 
+    const modalContainer = document.querySelector(".modal-container");
+    modalContainer.classList.toggle("active");
+    closeModal();
+  });
+}
+// création de la modale
 function addMovieToModal(res) {
   const data = res;
   const {
@@ -71,75 +107,6 @@ function makeDesc(description) {
   const items = document.querySelector(".desc");
   items.innerText = description;
 }
-// afficher le nom du film
-function createTitle(name) {
-  const items = document.querySelector("#movieItems");
-  const title = document.createElement("h2");
-  title.classList.add("title");
-  title.innerText = name;
-  items.appendChild(title);
-  return items;
-}
-// afficher une description du film
-function createParagraph(description) {
-  const items = document.querySelector("#movieItems");
-  const paragraph = document.createElement("p");
-  paragraph.classList.add("description");
-  items.appendChild(paragraph);
-  paragraph.innerText = description;
-}
-// créer l'élément image du film
-function createImage(image_url) {
-  const items = document.querySelector("#bestMovieItems");
-  const image = document.createElement("img");
-  image.src = image_url;
-  items.appendChild(image);
-}
-function makeBestmoviesScoresImages(id, image_url) {
-  const items = document.querySelector("#bestScoresItems");
-  const image = document.createElement("img");
-  image.classList.add("movies");
-  image.setAttribute("movie", id);
-  image.src = image_url;
-  items.appendChild(image);
-}
-function makeBestmoviesActionImages(id, image_url) {
-  const items = document.querySelector(".action");
-  const image = document.createElement("img");
-  image.classList.add("movies");
-  image.setAttribute("movie", id);
-  image.src = image_url;
-  items.appendChild(image);
-}
-function makeBestmoviesAdventureImages(id, image_url) {
-  const items = document.querySelector("#fantasyItems");
-  const image = document.createElement("img");
-  image.classList.add("movies");
-  image.setAttribute("movie", id);
-  image.src = image_url;
-  items.appendChild(image);
-}
-function makeBestmoviesComedyImages(id, image_url) {
-  const items = document.querySelector("#comedyItems");
-  const image = document.createElement("img");
-  image.classList.add("movies");
-  image.setAttribute("movie", id);
-  image.src = image_url;
-  items.appendChild(image);
-}
-
-function createLink(id) {
-  const play = document.querySelector(".play");
-  play.addEventListener("click", () => {
-    fetch("http://localhost:8000/api/v1/titles/" + id)
-      .then((res) => res.json())
-      .then((res) => addMovieToModal(res));
-
-    const modalContainer = document.querySelector(".modal-container");
-    modalContainer.classList.toggle("active");
-    closeModal();
-  });
-}
 
 function closeModal() {
   const close = document.querySelector(".close");
@@ -170,14 +137,4 @@ function closeModal() {
     modalContainer.classList.remove("active");
   });
 }
-export {
-  makeBestmoviesComedyImages,
-  makeBestmoviesAdventureImages,
-  makeBestmoviesActionImages,
-  makeBestmoviesScoresImages,
-  createImage,
-  createLink,
-  createParagraph,
-  createTitle,
-  // addMovieToModal,
-};
+export { createImage, createLink, createParagraph, createTitle, closeModal };
